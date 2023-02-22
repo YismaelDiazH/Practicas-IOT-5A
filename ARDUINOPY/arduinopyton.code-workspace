@@ -1,0 +1,25 @@
+{
+	"folders": [
+		{
+			"path": "../../OneDrive/Escritorio/ExamenWeb"
+		},
+		{
+			"path": "../../OneDrive/Documents/QuintoCuatri/Aplicaciones Moviles/Apuestas"
+		},
+		{
+			"path": "../../OneDrive/Documents/QuintoCuatri/Aplicaciones Moviles/Repaso HTML"
+		},
+		{
+			"path": "../../OneDrive/Documents/QuintoCuatri/Base de Datos/albumPractica"
+		},
+		{
+			"path": "../../OneDrive/Documents/QuintoCuatri/Aplicaciones Moviles/FinanzasProject/mis-finanzas"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "ExamenWeb"
+	}
+}

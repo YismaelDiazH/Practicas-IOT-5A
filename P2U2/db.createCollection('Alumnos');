@@ -1,0 +1,20 @@
+db.createCollection('Alumnos');
+
+//Registro con ID gerenado automáticamente
+db.Alumnos.insertOne({
+  nombre:'Andres Yismael',
+  carrera:'DSM',
+  grado:5,
+  grupo:'A'
+})
+
+db.Alumnos.find();
+
+//Registro con ID gerenado definido
+db.Alumnos.insertOne({
+  _id: new Date(),
+  nombre:'Andres Yismael',
+  carrera:'DSM',
+  grado:5,
+  grupo:'A'
+});

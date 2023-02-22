@@ -1,0 +1,119 @@
+db.createCollection('Clientes');
+
+db.Clientes.insertOne({
+  _id: 1,
+  nombre:'Andres Yismael',
+  Apellidos:'Diaz Hernández',
+  Domicilio:'Jiutepec',
+  Tel:'777606511225'
+});
+db.Clientes.insertOne({
+  _id: 2,
+  nombre:'Cristian Alexis',
+  Apellidos:'Campos Román',
+  Domicilio:'Zapata',
+  Tel:'7776051223'
+});
+db.Clientes.find();
+db.Clientes.insertOne({
+  _id: 2,
+  nombre:'Maycon ',
+  Apellidos:'Manuel',
+  Domicilio:'Zapata',
+  Tel:'7776051223'
+});
+
+db.libros.find(
+  {_id:{$eq:1}}
+);
+
+db.libros.find();
+
+db.libros.updateOne(
+  //documento a buscar
+  {_id:{$eq:1}},
+  //Actualizar los valores
+  {$set:{drivers:'No'}}
+);
+
+db.libros.updateOne(
+   {_id:{$eq:1}},
+//valor a quitar
+   {$unset:{drivers:''}}
+)
+
+db.libros.updateOne(
+   {_id:{$eq:1}},
+//valor a actualizar con arrays
+)
+db.libros.updateOne(
+   {_id:{$eq:1}},
+//valor a borrar con arrays
+   {$pull:{editorial:'Siglo XXI'}}
+)
+
+db.getCollectionNames();
+db.articulos.drop()
+db.articulos.insertOne(
+{
+_id: 1,
+nombre: 'MULTIFUNCION HP DESKJET 2675',
+rubro: 'impresora',
+precio: 3000,
+stock: 20  
+}
+)
+db.articulos.insertOne(
+{
+_id: 2,
+nombre: 'MULTIFUNCION EPSON EXPRESSION XP241',
+rubro: 'impresora',
+precio: 3700,
+stock: 5
+}
+)
+db.articulos.insertOne(
+{
+_id: 3,
+nombre: 'LED 19 PHILIPS',
+rubro: 'monitor',
+precio: 4500,
+stock: 2
+}
+)
+db.articulos.insertOne(
+{
+_id: 4,
+nombre: 'LED 22 PHILIPS',
+rubro: 'monitor',
+precio: 5700,
+stock: 4
+}
+)
+db.articulos.insertOne(
+{
+_id: 5,
+nombre: 'LED 27 PHILIPS',
+rubro: 'monitor',
+precio: 12000,
+stock: 1
+}
+)
+db.articulos.insertOne(
+{
+_id: 6,
+nombre: 'LOGITECH M90',
+rubro: 'mouse',
+precio: 300,
+stock: 4
+}
+)
+use base1
+db.articulos.find();
+// Borrar los documentos de la colección 'articulos' cuyo rubro son impresoras, utilizar las
+// dos sintaxis que permite MongoDB.
+db.articulos.deleteOne({rubro: "impresora"})
+db.articulos.deleteMany({rubro: "impresora"})
+
+// Borrar todos los artículos que tienen un _id mayor o igual a 5.
+db.articulos.deleteMany({_id: { $gte : 5}})
